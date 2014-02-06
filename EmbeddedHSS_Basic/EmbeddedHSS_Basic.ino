@@ -64,6 +64,7 @@ void loop() {
     if (Mirf.dataReady()) {
       Command *message = getData();
       executeCommand(*message);
+      free(message);
     }
   }
 }
